@@ -1,3 +1,3 @@
-import Category from './modules/category/_category-main.js';
+import Category from './modules/_category-main.js';
 
-window.addEventListener('load' ,Category.init);
+document.addEventListener('DOMContentLoaded',Category.init);

@@ -9,7 +9,7 @@
     },
     "author": "@cristianosoldier",
     "license": "ISC",
-    "homepage": "https://cristrocha.github.io/challenge/",
+    "homepage": "https://cristrocha.github.io/Perfumaria/",
     "dependencies": {
         "@babel/core": "^7.1.2",
         "@babel/preset-env": "^7.1.0",
