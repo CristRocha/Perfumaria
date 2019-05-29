@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./../../css/Loja-Common.css"/>
+    <link rel="stylesheet" href="./../../css/Loja-Category.css" media="all"/>
+  </head>
+  <body>
+    <header class="header">
+      <section class="header__wrap">
+        <div class="header__title">Minha Loja</div>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__menu-item">Perfumaria</li>
+            <li class="header__menu-item">Maquiagem</li>
+            <li class="header__menu-item">Cabelos</li>
+            <li class="header__menu-item">Infantil</li>
+          </ul>
+        </nav>
+        <div class="header__cart"><img class="header__cart-img" src="./../../img/cart.png" alt="Carrinho"><span class="header__cart-value js--cart"></span></div>
+      </section>
+    </header>
+    <main class="content" role="main">
+      <section class="line">
+        <div class="line-text">Últimos Produtos</div>
+      </section>
+      <section class="shelf js--shelf">
+        <div class="shelf__product"><img class="shelf__product-img js--product-img">
+          <h2 class="shelf__product-name js--product-name"></h2>
+          <div class="shelf__product-value js--product-value"></div>
+          <button class="shelf__buy-button js--buy-button"></button>
+        </div>
+      </section>
+      <section class="x-container"></section>
+    </main>
+    <footer></footer>
+    <script type="text/javascript" src="./../../js/Loja-Common.js"></script>
+    <script type="text/javascript" src="./../../js/Loja-Category.js"></script>
+    <script type="text/javascript" src="./../../js/Loja-Product.js"></script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+.shelf{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  &__product{
+    max-width: 300px;
+    max-height: 370;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+      
+      &-img{  
+      max-width: 100%;
+      height: 70%;  
+      text-align: center;
+      }
+  }
+}

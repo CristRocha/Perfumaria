@@ -1,0 +1,19 @@
+body{
+  font: 1rem/1.2 $font-main;
+  text-transform: uppercase;
+  margin: 0;
+  color: $color-grey-dark;
+  @include mq("md","max"){
+    font-size: 0.9rem;
+  }
+  @include mq("sm","max"){
+    font-size: 0.8rem;
+  }
+  @include mq("xs","max"){
+    font-size: 0.7rem;
+  }
+ .content{
+   width: 65%;
+   margin: 0 auto;
+ } 
+}

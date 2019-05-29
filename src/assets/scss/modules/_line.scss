@@ -1,0 +1,29 @@
+.line{
+  margin: 30px auto;
+  height: 20px;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  &-text{
+    font-size: 1.25em;
+    width: 100%;
+    text-align: center;
+    white-space: nowrap;
+    &::before{
+      content: "";
+      display: inline-block;
+      width: 20%;
+      margin-right: 5%;
+      border-top: 1px solid $color-grey-medium;
+      vertical-align: middle;
+    }
+    &::after{
+      content: "";
+      display: inline-block;
+      width:20%;
+      margin-left: 5%;
+      border-top: 1px solid $color-grey-medium;
+      vertical-align: middle;
+    }
+  }
+}

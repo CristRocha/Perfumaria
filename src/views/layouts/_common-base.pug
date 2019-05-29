@@ -1,0 +1,29 @@
+
+- var $templateName = ''
+- var $templateClass = ''
+
+block vars
+
+doctype
+html(lang='pt-br')
+    head
+        include ./../templates/sub-templates/Loja-Head.pug
+    
+        block styles
+            include ./../templates/sub-templates/Loja-Styles.pug
+
+    body
+        block header
+            include ./../templates/sub-templates/Loja-Header.pug
+
+
+        main(role='main', class='content')
+            block content
+
+        //- Footer
+        block footer
+            include ./../templates/sub-templates/Loja-Footer.pug
+
+        //- Scripts
+        block scripts
+            include ./../templates/sub-templates/Loja-Scripts

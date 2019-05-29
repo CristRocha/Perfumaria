@@ -1,0 +1,58 @@
+.header{
+  width: 100vw;
+  height: 102px;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(to top,$color-grey-light,#fff);
+  border-bottom: 1px solid $color-grey-medium;
+  &__wrap{
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__title{
+    font-size: 1.25em;
+    font-weight: bold;
+    flex: 1;
+    min-width: 125px;
+    border-right: 1px solid $color-grey-medium;    
+  }
+
+  &__nav{
+    flex: 5;
+  }
+  &__menu{
+    display: flex;
+    justify-content: flex-start;
+    &-item{
+      margin: auto 3.5%;
+    }
+  }
+  &__cart{
+    flex: 1;
+    max-width: fit-content;
+    border: 2px solid $color-grey-dark;
+    border-radius: 20px;
+    padding: 1% 2%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+      &-img{
+        display: inline-block;
+        width:100%;
+        max-width: 100%;
+
+        @include mq("sm","max"){
+          width: 80%;
+          height: 80%;
+        }
+        @include mq("xs","max"){
+          width: 60%;
+          height: 60%;
+        }
+      }
+  }
+}
