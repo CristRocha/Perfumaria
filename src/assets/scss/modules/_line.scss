@@ -2,13 +2,15 @@
   margin: 30px auto 0;
   height: 20px;
   display: flex;
-  width: 100%;
+  width: 80%;
   justify-content: center;
   text-align: center;
+  @include mq("sm","max"){
+    width: 100%;
+  }
   &-text{
     font-size: 1.25em;
-    width: 80%;
-    text-align: center;
+    width: 100%;
     white-space: nowrap;
     margin: auto;
     text-align: center;
