@@ -3,6 +3,7 @@ body{
   text-transform: uppercase;
   margin: 0;
   color: $color-grey-dark;
+  overflow-x: hidden;
   @include mq("md","max"){
     font-size: 0.9rem;
   }

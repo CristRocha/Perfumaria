@@ -81,7 +81,7 @@ const Methods = {
       //Se o item existe
       if(chosen){
         Methods.cart.total += chosen[0].price;  
-        Methods.components.cart.innerText = Methods.cart.total.toFixed(2).replace(".",",");
+        Methods.components.cart.innerText ="R$ "+ Methods.cart.total.toFixed(2).replace(".",",");
       }else{
         alert("Produto Indisponível")
       }
