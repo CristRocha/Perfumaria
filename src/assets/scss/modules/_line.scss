@@ -2,13 +2,16 @@
   margin: 30px auto 0;
   height: 20px;
   display: flex;
-  width: 80%;
+  width: 100%;
   justify-content: center;
+  text-align: center;
   &-text{
     font-size: 1.25em;
-    width: 100%;
+    width: 80%;
     text-align: center;
     white-space: nowrap;
+    margin: auto;
+    text-align: center;
     &::before{
       content: "";
       display: inline-block;
