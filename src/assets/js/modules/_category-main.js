@@ -38,7 +38,6 @@ const Methods = {
         Methods.renderShelf();
       })
     },
-
     //Montar Prateleiras
     renderShelf(){
       Methods.products.forEach(product =>  {

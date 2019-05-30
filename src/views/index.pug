@@ -1,0 +1,20 @@
+extends layouts/_common-base
+
+//- Template variables
+block vars
+    - var $templateName = 'Category'
+
+//- Page styles
+block append styles
+    link(rel='stylesheet', href=`css/Loja-${$templateName}.css`, media='all')/
+
+//- Main Content 
+block content
+    include modules/_line
+    include modules/_shelf
+
+    section(class='x-container')
+    
+//- Page scripts
+block append scripts
+    script(type='text/javascript', src=`js/Loja-${$templateName}.js`)

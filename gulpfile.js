@@ -12,7 +12,7 @@ function compilaHtml() {
         .pipe(pug({
             pretty: true,
         }))
-        .pipe(gulp.dest('./dist/html'));
+        .pipe(gulp.dest('./dist'));
 }
 
 gulp.task('compilaHtml', compilaHtml);
