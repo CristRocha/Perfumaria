@@ -54,7 +54,7 @@ const Methods = {
           button.classList.add('shelf__product-buy');
           
           name.textContent = product.name;
-          price.textContent = product.price.toString().replace(".",",");
+          price.textContent = "R\u0024 " + product.price.toString().replace(".",",");
           img.setAttribute('src',product.img)
           button.addEventListener('click',Methods.addToCart)
 
@@ -66,11 +66,11 @@ const Methods = {
       });
   },
 
-    //Valida e Adiona os valores ao Carrinho
+    //Valida e Adiciona os valores ao Carrinho
     addToCart (ev){
       ev.preventDefault();
       
-      let val = parseFloat(ev.target.parentNode.lastChild.textContent.replace(",","."));
+      let val = parseFloat(ev.target.parentNode.lastChild.textContent.replace("R\u0024","").replace(",","."));
       let name = ev.target.parentNode.querySelector('.shelf__product-name').textContent;
 
       //Verifica se os valores estão corretos
