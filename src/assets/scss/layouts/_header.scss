@@ -102,7 +102,7 @@
 
   &__cart {
     position: relative;
-    min-height: 31px;
+    min-height: 40px;
     
     @include mq("sm", "max") {
       width: 30%;
