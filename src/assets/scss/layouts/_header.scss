@@ -5,26 +5,22 @@
   justify-content: center;
   background: linear-gradient(to top, $color-grey-light, #fff);
   border-bottom: 1px solid $color-grey-medium;
-
+  
   &__wrap {
     width: 65%;
     height: 100%;
     display: flex;
-    justify-content: space-between !important;
+    justify-content: space-between;
     align-items: center;
-    @include mq("sm", "max") {
-      width: 75%;
-    }
   }
 
   &__title {
     font-size: 1.25em;
     font-weight: bold;
     color: $color-grey-dark;
-    max-width: fit-content;
-    border-right: 1px solid $color-grey-medium;
+    min-width: fit-content;
+    border-right: 1px solid $color-grey;
     padding-right: 3%;
-    white-space: nowrap;
     @include mq("sm", "max") {
       text-align: center;
       flex-shrink: 0;
@@ -35,7 +31,7 @@
   }
 
   &__nav {
-    flex: 5;
+    flex: 5 4;
 
     @include mq("sm", "max") {
       transition: opacity 0.4s 0.4s, width 0.3s;
@@ -49,8 +45,9 @@
       z-index: 4;
       will-change: opacity;
       will-change: width;
+      overflow: hidden !important;
     }
-
+    
     &.change {
       opacity: 1;
       width: 100vw;
@@ -62,13 +59,13 @@
     justify-content: flex-start;
 
     @include mq("sm", "max") {
-      position: absolute;
+      position: fixed;
       text-align: center;
       transform: translateX(-100%);
       transition: transform 0.7s 0.2s;
       top: 0;
       height: 100%;
-      width: 40vw;
+      width: 35vw;
       padding: 20px;
       flex-direction: column;
       align-items: center;
@@ -76,6 +73,7 @@
       z-index: 5;
       will-change: transform;
       box-shadow: 0 0 40px 7px #fff;
+      overflow: hidden;
     }
 
     &.change {
@@ -103,7 +101,6 @@
   &__cart {
     position: relative;
     min-height: 40px;
-    
     @include mq("sm", "max") {
       width: 30%;
       }
@@ -120,6 +117,9 @@
       top: 0;
       left: 0;
       white-space: nowrap;
+      @include mq("sm", "max") {
+        margin-left: 25%;
+        }
     }
 
     &-img {

@@ -34,7 +34,8 @@ const Methods = {
             price: product.Value,
             img: product.images[0].imageUrl,
           })
-        })
+        });
+        Object.freeze(Methods.products);
         Methods.renderShelf();
       })
   },

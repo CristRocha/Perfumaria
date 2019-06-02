@@ -10,7 +10,7 @@
     }
 
     @if $type == max {
-        $width: $width - 1px;
+        $width: $width + 1px;
     }
 
     @media only screen and (#{$type}-width: $width) {

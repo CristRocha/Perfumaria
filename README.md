@@ -1,10 +1,11 @@
 # Teste Boticário: Front-End
-autor : Cristiano Rocha Feitoza
+Autor : Cristiano Rocha Feitoza
 
 # Requisitos
 - Node js
+- Sass
 
-## Instruções
+# Instruções
 - abra o console e instale todas as dependências com o comando "npm install"
 - aguarde até que todas suas dependêcias sejam intaladas
 - para executar as tarefas insira no console o comando "npm run start".
