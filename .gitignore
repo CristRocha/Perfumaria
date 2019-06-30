@@ -1,7 +1,2 @@
-.sass-cache
-.DS_Store
-npm-debug.log
 node_modules
-fonts/
-TAREFAS.md
-.tmp
+dist

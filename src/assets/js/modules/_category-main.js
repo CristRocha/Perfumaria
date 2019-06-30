@@ -1,6 +1,10 @@
 
 const Methods = {
-  //Cache do Dom
+  init() {
+    Methods.getProducts();
+    Methods.menuMobile();
+  },
+  //Cache do Dom  
   components: {
     mainShelf: document.querySelector('.js--shelf'),
     cart: document.querySelector('.js--cart'),
@@ -8,7 +12,6 @@ const Methods = {
     navMenu: document.querySelector('.header__nav'),
     listMenu: document.querySelector('.header__menu'),
   },
-
   //Cache dos produtos
   products: [],
 
@@ -16,11 +19,6 @@ const Methods = {
   cart: {
     total: 0,
     qty: 0
-  },
-
-  init() {
-    Methods.getProducts();
-    Methods.menuMobile();
   },
 
   //Requisição única da API
@@ -94,8 +92,8 @@ const Methods = {
       Methods.components.navMenu.classList.toggle("change");
       Methods.components.listMenu.classList.toggle("change");
     })
-  },
+  }
 }
 export default {
-  init: Methods.init,
+  init: Methods.init
 }
