@@ -23,7 +23,7 @@ const Methods = {
 
   //Requisição única da API
   getProducts() {
-    fetch('https://raw.githubusercontent.com/CristRocha/Perfumaria/master/src/assets/js/products.json')
+    fetch('https://raw.githubusercontent.com/CristRocha/Perfumaria/master/src/assets/js/api/products.json')
       .then((res) => res.text())
       .then((data) => {
         JSON.parse(data).forEach(product => {
