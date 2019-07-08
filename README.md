@@ -1,6 +1,6 @@
 # Gulp 4 Browserify
  ### A Gulp Workflow setup with **ITCSS + SMACSS Architecture** and **Browserify for ES6 Modules**
-![Witch Devs](https://raw.githubusercontent.com/CristRocha/Gulp-4-Browserify/master/src/assets/img/WitchDevs.png)
+![Witch Devs](https://raw.githubusercontent.com/CristRocha/Gulp-4-Browserify/master/src/assets/img/WicthDevs.png)
 ## Specifications
 
  * Pug Templates
