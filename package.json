@@ -5,12 +5,10 @@
     "main": "index.js",
     "scripts": {
         "dev": "gulp watch --color --development",
-        "prod": "gulp --color --production",
-        "deploy": "gh-pages -d dist"
+        "prod": "gulp --color --production"
     },
     "author": "Cristiano",
     "license": "MIT",
-    "homepage": "https://cristrocha.github.io/Gulp4Browserify/",
     "devDependencies": {
         "@babel/core": "^7.4.5",
         "@babel/preset-env": "^7.4.5",
@@ -19,7 +17,6 @@
         "browserify": "^16.2.3",
         "del": "^4.1.1",
         "event-stream": "^4.0.1",
-        "gh-pages": "^2.0.1",
         "glob": "^7.1.4",
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^5.0.0",
