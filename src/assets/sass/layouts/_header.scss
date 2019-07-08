@@ -1,3 +1,5 @@
+@import '../components/mobile-menu';
+
 .header {
   width: 100vw;
   height: 102px;
@@ -48,7 +50,7 @@
       overflow: hidden !important;
     }
     
-    &.change {
+    &.has--change {
       opacity: 1;
       width: 100vw;
     }
@@ -76,7 +78,7 @@
       overflow: hidden;
     }
 
-    &.change {
+    &.has--change {
       transform: translateX(0);
     }
 

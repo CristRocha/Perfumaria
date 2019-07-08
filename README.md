@@ -1,19 +1,58 @@
-# Teste Boticário: Front-End
-Autor : Cristiano
+# Gulp 4 Browserify
+ ### A Gulp Workflow setup with **ITCSS + SMACSS Architecture** and **Browserify for ES6 Modules**
+![Witch Devs](https://cristrocha.github.io/Gulp4Browserify/src/assets/img/Witch-Devs-Logo.png)
+## Specifications
 
-## Requisitos
-- Node js
+ * Pug Templates
+ * Browser Sync Live Reload
+ * Sass to Css Compressed & Prefixed
+ * Browserify
+    * Glob
+    * Uglify
+    * Babelify
+    * Event Stream
+    * Vynil Source Stream & Vynil Buffer
+  * Image Min
+  * Sprite Smith
 
-## Instruções
-- Abra o console e instale todas as dependências com o comando:
+## Requirements
+* Node Js
+## Install
 ```bash
- npm install
+  npm install
 ```
-- aguarde até que todas suas dependêcias sejam intaladas
-- para executar as tarefas insira no console o comando:
+## Guide
+- Open the Gulp File
+- Write the **First Name** of the entries of your js files
+```javascript
+const storeName = 'my-modular-file';
+```
+- Configure your paths 
+```javascript
+const path = {
+        views: {
+            src  : './src/views/**/[^_]*.pug',
+            watch: './src/views/**/*.pug',
+            dest : './dist'
+        },
+        styles: {
+            src   : 'src/assets/sass/**/*.scss',
+            dest  : './dist/css'
+        },
+        scripts: {
+            src   : './src/assets/js/',
+            dest  : './dist/js'
+        },
+  };
+```
+## Comand and Control
+- Development
 ```bash
-npm run start
+npm run dev
 ```
-- os arquivos serão compilados para a pasta ./dist
-- os arquivos de edição se encontram na pasta ./src
-- para visualizar o projeto abra o arquivo index.html em ./dist/templates/index.html no navegador
+- Production
+```bash
+npm run prod
+```
+
+**Cheers**

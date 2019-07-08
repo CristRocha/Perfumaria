@@ -4,13 +4,13 @@
     "description": "Gulp Setup",
     "main": "index.js",
     "scripts": {
-        "dev": "gulp watch --color",
+        "dev": "gulp watch --color --development",
         "prod": "gulp --color --production",
         "deploy": "gh-pages -d dist"
     },
     "author": "Cristiano",
     "license": "MIT",
-    "homepage": "https://cristrocha.github.io/Perfumaria/",
+    "homepage": "https://cristrocha.github.io/Gulp4Browserify/",
     "devDependencies": {
         "@babel/core": "^7.4.5",
         "@babel/preset-env": "^7.4.5",
@@ -30,9 +30,7 @@
         "gulp-pug": "^4.0.1",
         "gulp-sass": "^4.0.1",
         "gulp-uglify": "^3.0.0",
-        "gulplog": "^1.0.0",
         "vinyl-buffer": "^1.0.1",
-        "vinyl-source-stream": "^2.0.0",
-        "watchify": "^3.11.1"
+        "vinyl-source-stream": "^2.0.0"
     }
 }

@@ -35,7 +35,7 @@ const buffer        = require('vinyl-buffer');
 const glob          = require('glob');
 const stream        = require('event-stream');
 const del           = require('del');
-const browserSync = require("browser-sync").create();
+const browserSync   = require("browser-sync").create();
 
 // ------------------------------------ Development ---------------------------------------
 
@@ -59,16 +59,12 @@ function es(done) {
                 .pipe(gulp.dest('./dist/js'));
         });
         stream.merge(tasks).on('end', done);
-    })
+    });
 };
 
 function scss() {
     return gulp.src(path.styles.src)
         .pipe(sass())
-        .pipe(prefixer({
-            browsers: ['last 4 versions'],
-            cascade: false
-        }))
         .pipe(gulp.dest(path.styles.dest))
         .pipe(browserSync.stream());
 };
@@ -119,7 +115,7 @@ function css() {
             outputStyle : 'compressed'
         }))
         .pipe(prefixer({
-            browsers: ['last 4 versions'],
+            browsers: ['last 5 versions'],
             cascade: false
         }))
         .pipe(gulp.dest(path.styles.dest));

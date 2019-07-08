@@ -1,8 +1,8 @@
 
-const Methods = {
+const Category = {
   init() {
-    Methods.getProducts();
-    Methods.menuMobile();
+    Category.getProducts();
+    Category.menuMobile();
   },
   //Cache do Dom  
   components: {
@@ -27,19 +27,19 @@ const Methods = {
       .then((res) => res.text())
       .then((data) => {
         JSON.parse(data).forEach(product => {
-          Methods.products.push({
+          Category.products.push({
             name: product.name,
             price: product.Value,
             img: product.images[0].imageUrl,
           })
         });
-        Object.freeze(Methods.products);
-        Methods.renderShelf();
+        Object.freeze(Category.products);
+        Category.renderShelf();
       })
   },
   //Montar Prateleiras
   renderShelf() {
-    Methods.products.forEach(product => {
+    Category.products.forEach(product => {
       let shelfProduct = document.createElement('div');
       let button = document.createElement('button');
       let img = document.createElement('img');
@@ -55,7 +55,7 @@ const Methods = {
       img.setAttribute('src', product.img)
       name.textContent = product.name;
       price.textContent = "R\u0024 " + product.price.toFixed(2).replace(".", ",");
-      button.addEventListener('click', Methods.addToCart)
+      button.addEventListener('click', Category.addToCart)
 
       shelfProduct.appendChild(button)
       shelfProduct.appendChild(img)
@@ -73,27 +73,27 @@ const Methods = {
     let name = ev.target.parentNode.querySelector('.shelf__product-name').textContent;
 
     //Verifica se os valores estão corretos
-    let chosen = Methods.products.filter(item => {
+    let chosen = Category.products.filter(item => {
       return name == item.name && val == item.price
     })
 
     //Se o item existe
     if (chosen.length) {
-      Methods.cart.total += chosen[0].price;
-      Methods.components.cart.innerText = "R$ " + Methods.cart.total.toFixed(2).replace(".", ",");
+      Category.cart.total += chosen[0].price;
+      Category.components.cart.innerText = "R$ " + Category.cart.total.toFixed(2).replace(".", ",");
     } else {
       alert("Produto Indisponível")
     }
   },
 
   menuMobile() {
-    Methods.components.mobileMenu.addEventListener('click', function () {
-      this.classList.toggle("change");
-      Methods.components.navMenu.classList.toggle("change");
-      Methods.components.listMenu.classList.toggle("change");
+    Category.components.mobileMenu.addEventListener('click', function () {
+      this.classList.toggle("has--change");
+      Category.components.navMenu.classList.toggle("has--change");
+      Category.components.listMenu.classList.toggle("has--change");
     })
   }
 }
 export default {
-  init: Methods.init
+  init: Category.init
 }
