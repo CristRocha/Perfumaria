@@ -21,15 +21,24 @@ const Category = {
     qty: 0
   },
 
+  splitfy(url,position,separator,content){
+    
+    let urlArray = url.split(separator);
+      
+    urlArray.splice(position,0,content);
+
+    return  urlArray.join(separator).replace(separator+content,content);
+
+  },
   //Requisição única da API
   getProducts() {
     axios.get('https://raw.githubusercontent.com/CristRocha/Perfumaria/master/src/assets/js/api/products.json')
       .then(({data}) => {
-        data.forEach(product => {
+        data.forEach((product) => {
           Category.products.push({
             name: product.name,
             price: product.Value,
-            img: product.images[0].imageUrl,
+            img: this.splitfy(product.images[0].imageUrl,6,'/','-225-225'),
           })
         });
         Object.freeze(Category.products);

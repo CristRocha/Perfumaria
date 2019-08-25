@@ -2,7 +2,6 @@ export function intersect(targets){
 
       const lazyLoad = target => {
         const io = new IntersectionObserver((entries, observer) => {
-          console.log(entries)
           entries.forEach(entry => {
             if (entry.isIntersecting) {
               const img = entry.target;
