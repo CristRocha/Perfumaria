@@ -1,8 +1,8 @@
-
+import axios from 'axios';
+import { intersect } from '../api/intersection-Observer';
 const Category = {
   init() {
     Category.getProducts();
-    Category.menuMobile();
   },
   //Cache do Dom  
   components: {
@@ -23,10 +23,9 @@ const Category = {
 
   //Requisição única da API
   getProducts() {
-    fetch('https://raw.githubusercontent.com/CristRocha/Perfumaria/master/src/assets/js/api/products.json')
-      .then((res) => res.text())
-      .then((data) => {
-        JSON.parse(data).forEach(product => {
+    axios.get('https://raw.githubusercontent.com/CristRocha/Perfumaria/master/src/assets/js/api/products.json')
+      .then(({data}) => {
+        data.forEach(product => {
           Category.products.push({
             name: product.name,
             price: product.Value,
@@ -39,6 +38,7 @@ const Category = {
   },
   //Montar Prateleiras
   renderShelf() {
+
     Category.products.forEach(product => {
       let shelfProduct = document.createElement('div');
       let button = document.createElement('button');
@@ -52,7 +52,7 @@ const Category = {
       price.classList.add('shelf__product-value');
       button.classList.add('shelf__product-buy');
 
-      img.setAttribute('src', product.img)
+      img.setAttribute('data-lazy', product.img)
       name.textContent = product.name;
       price.textContent = "R\u0024 " + product.price.toFixed(2).replace(".", ",");
       button.addEventListener('click', Category.addToCart)
@@ -63,6 +63,7 @@ const Category = {
       shelfProduct.appendChild(price)
       this.components.mainShelf.appendChild(shelfProduct);
     });
+    intersect(document.querySelectorAll('.shelf__product-img'));
   },
 
   //Valida e Adiciona os valores ao Carrinho
@@ -85,14 +86,6 @@ const Category = {
       alert("Produto Indisponível")
     }
   },
-
-  menuMobile() {
-    Category.components.mobileMenu.addEventListener('click', function () {
-      this.classList.toggle("has--change");
-      Category.components.navMenu.classList.toggle("has--change");
-      Category.components.listMenu.classList.toggle("has--change");
-    })
-  }
 }
 export default {
   init: Category.init

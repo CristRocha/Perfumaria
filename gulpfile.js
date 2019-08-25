@@ -47,11 +47,11 @@ function sync(){
 }
 
 function es(done) {
-    return glob(`${path.scripts.src}${storeName}-**.js`, function(err,folder) {
+    return glob(`${path.scripts.src}*.js`, function(err,folder) {        
         if(err) done(err);
         let files = folder.map((file) => file.split('js/')[1])
         var tasks = files.map(function(entry) {
-          return browserify({ entries: [ path.scripts.src + entry] })
+          return browserify({ entries:  path.scripts.src + entry })
                 .transform(babelify, { presets: ["@babel/preset-env"] })
                 .bundle()
                 .pipe(source(entry))
@@ -77,7 +77,7 @@ function watch() {
 // ------------------------------------- Production ---------------------------------------
 
 function js(done) {
-    return glob(`${path.scripts.src}${storeName}-**.js`, function(err,folder) {
+    return glob(`${path.scripts.src}${storeName}*.js`, function(err,folder) {
         if(err) done(err);
         let files = folder.map((file) => file.split('js/')[1])
         var tasks = files.map(function(entry) {
@@ -102,9 +102,9 @@ function html() {
 }
 
 function img() {
-    return gulp.src('./src/assets/img/*.png')
+    return gulp.src(['./src/assets/img/*.png','./src/assets/img/*.jpg','./src/assets/img/*.jpeg'])
         .pipe(imagemin(
-            { optimizationLevel: 5 },
+            { optimizationLevel: 1 },
         ))
         .pipe(gulp.dest('./dist/img'))
 }
@@ -129,6 +129,9 @@ function clean() {
 
 const dev = gulp.series(clean,gulp.parallel(sync,img,html,scss,es,watch));
 exports.watch = dev;
+
+const imageminify = gulp.series(clean,gulp.parallel(img));
+exports.imgMin = imageminify;
 
 const build = gulp.series(clean,gulp.parallel(html,css,js,img));
 exports.default = build;

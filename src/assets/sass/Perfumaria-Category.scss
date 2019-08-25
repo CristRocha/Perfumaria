@@ -1,6 +1,7 @@
-@import 'settings/settings-base';
-@import 'layouts/header';
-@import 'components/line';
-@import 'components/shelf';
+@import './settings/settings-base';
+@import './layouts/header';
+@import './modules/line';
+@import './modules/shelf';
+@import './states/states.scss'
 // @import 'theme/black-friday';
 

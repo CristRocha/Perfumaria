@@ -19,9 +19,12 @@
         }
       }
       &-img{  
-      max-width: 100%;
-      display: block;  
+      max-width: 100%;  
       text-align: center;
+      transform: translateY(-50%);
+      opacity: 0;
+      transition: all 3s;
+        
       }
       &-name{
         margin-top: 10px;

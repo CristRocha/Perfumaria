@@ -1,4 +1,4 @@
-@import '../components/mobile-menu';
+@import '../modules/mobile-menu';
 
 .header {
   width: 100vw;
@@ -130,8 +130,6 @@
       margin-right: 5px;
       flex: 1 0 30%;
 
-      // @include mq("sm", "max") {
-      // }
     }
 
     &-value {
