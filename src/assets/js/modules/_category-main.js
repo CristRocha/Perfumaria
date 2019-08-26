@@ -21,7 +21,7 @@ const Category = {
     qty: 0
   },
 
-  splitfy(url,position,separator,content){
+  resizeImg(url,position,separator,content){
     
     let urlArray = url.split(separator);
       
@@ -38,7 +38,7 @@ const Category = {
           Category.products.push({
             name: product.name,
             price: product.Value,
-            img: this.splitfy(product.images[0].imageUrl,6,'/','-225-225'),
+            img: this.resizeImg(product.images[0].imageUrl,6,'/','-225-225'),
           })
         });
         Object.freeze(Category.products);
@@ -51,11 +51,13 @@ const Category = {
     Category.products.forEach(product => {
       let shelfProduct = document.createElement('div');
       let button = document.createElement('button');
+      let frame = document.createElement('figure');
       let img = document.createElement('img');
       let name = document.createElement('div');
       let price = document.createElement('div');
 
       shelfProduct.classList.add('shelf__product');
+      frame.classList.add('shelf__product-frame');
       img.classList.add('shelf__product-img');
       name.classList.add('shelf__product-name');
       price.classList.add('shelf__product-value');
@@ -67,7 +69,8 @@ const Category = {
       button.addEventListener('click', Category.addToCart)
 
       shelfProduct.appendChild(button)
-      shelfProduct.appendChild(img)
+      frame.appendChild(img)
+      shelfProduct.appendChild(frame)
       shelfProduct.appendChild(name)
       shelfProduct.appendChild(price)
       this.components.mainShelf.appendChild(shelfProduct);

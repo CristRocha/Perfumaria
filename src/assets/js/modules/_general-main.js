@@ -4,7 +4,6 @@ export const General ={
   },
   components: {
     mainShelf: document.querySelector('.js--shelf'),
-    cart: document.querySelector('.js--cart'),
     mobileMenu: document.querySelector('.mobile-menu'),
     navMenu: document.querySelector('.header__nav'),
     listMenu: document.querySelector('.header__menu'),

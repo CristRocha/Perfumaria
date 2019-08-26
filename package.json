@@ -6,10 +6,12 @@
     "scripts": {
         "dev": "gulp watch --color --development",
         "prod": "gulp --color --production",
-        "img": "gulp imgMin --color"
+        "img": "gulp imgMin --color",
+        "deploy": "gh-pages -d dist"
     },
     "author": "Cristiano",
     "license": "MIT",
+    "homepage": "https://crisfeit.github.io/Gulp-4-Browserify/",
     "devDependencies": {
         "@babel/core": "^7.4.5",
         "@babel/preset-env": "^7.4.5",
