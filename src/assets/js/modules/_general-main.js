@@ -11,9 +11,9 @@ export const General ={
   //Desk
     menuMobile() {
       General.components.mobileMenu.addEventListener('click', function () {
-        this.classList.toggle("change");
-        General.components.navMenu.classList.toggle("change");
-        General.components.listMenu.classList.toggle("change");
+        this.classList.toggle("has--change");
+        General.components.navMenu.classList.toggle("has--change");
+        General.components.listMenu.classList.toggle("has--change");
       })
     }
   }

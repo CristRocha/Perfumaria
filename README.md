@@ -1,8 +1,11 @@
-# Gulp 4 Browserify
+# Fragrance Store
  ### A Gulp Workflow setup with **ITCSS + SMACSS Architecture** and **Browserify for ES6 Modules**
-![Witch Devs](https://raw.githubusercontent.com/CristRocha/Gulp-4-Browserify/master/src/assets/img/WicthDevs.png)
-## Specifications
+## Features
+* ES6 Modules
+* Lazyload with Intersection Observer
+* Axios Api
 
+## Specifications
  * Pug Templates
  * Browser Sync Live Reload
  * Sass to Css Compressed & Prefixed
