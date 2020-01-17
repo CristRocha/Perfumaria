@@ -1,6 +1,6 @@
 # Fragrance Store
  ### A Gulp Workflow setup with **ITCSS + SMACSS Architecture** and **Browserify for ES6 Modules**
- ![Witch Devs](https://raw.githubusercontent.com/CrisFeit/Fragrance-Store/master/src/assets/img/WicthDevs.png)
+ ![Witch Devs](https://raw.githubusercontent.com/CrisFeit/Fragrance-Store/master/src/assets/img/WitchDevs.png)
 ## Features
 * ES6 Modules
 * Lazyload with Intersection Observer
